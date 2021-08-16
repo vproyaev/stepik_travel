@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-2&_=vh%0(=ryg%*)5p-v%^!ql8d3zko992xx)@7-beypfs_atm
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
+STATIC_ROOT = 'static'
 
 
 # Application definition
