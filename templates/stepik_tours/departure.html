@@ -1,0 +1,23 @@
+{% extends 'stepik_tours/base.html' %}
+{% block bot %}
+    <main class="container mt-3">
+        <h1 class="display-5 mt-4">Летим {{ departure }}</h1>
+        <p class="mb-4">Найдено до {{ amount_departure }} туров, от {{ min_price }} до {{ max_price }} и
+            от {{ min_nights }} ночей до {{ max_nights }} ночей</p>
+        <!-- CARDS -->
+        <div class="row mt-5">
+            {% for key, this in that_departure.items %}
+                <div class="col-4">
+                    <div class="card mb-4">
+                        <img src="{{ this.picture }}" class="card-img-top img-fluid" alt="">
+                        <div class="card-body">
+                            <h2 class="h5 card-title">{{ this.title }}</h2>
+                            <p class="card-text">{{ this.description }}</p>
+                            <a href="/tour/{{ key }}" class="btn btn-sm btn-primary">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+{% endblock %}
