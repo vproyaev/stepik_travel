@@ -62,3 +62,7 @@ def custom404(request, exception):
 
 def custom500(request):
     return HttpResponseNotFound('У-уупс. Подождите-ка! А пока вернитесь на главную!')
+
+
+def custom503(request):
+    return HttpResponseNotFound('Что-то HEROKU мудрит. Подождите пожалуйста =)')

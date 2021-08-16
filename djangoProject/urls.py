@@ -26,3 +26,4 @@ urlpatterns = [
 
 handler404 = stepik_tours_view.custom404
 handler500 = stepik_tours_view.custom500
+handler503 = stepik_tours_view.custom503
